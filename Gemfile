@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'dashing'
+gem 'dotenv'
+gem 'curb'
 
 gem 'time_difference'
 
