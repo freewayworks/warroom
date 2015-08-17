@@ -1,14 +1,15 @@
 <script type='text/javascript'>
 $(function() {
   // These settings override the defaults set in application.coffee. You can do this on a per dashboard basis.
-  Dashing.gridsterLayout('[{"col":2,"row":1},{"col":1,"row":1},{"col":3,"row":1},{"col":2,"row":2},{"col":3,"row":2},{"col":1,"row":2},{"col":5,"row":1},{"col":4,"row":2},{"col":2,"row":3}]')
-  Dashing.widget_base_dimensions = [370, 340]
-  Dashing.numColumns = 5
+  //Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":1,"size_y":1},{"col":2,"row":1,"size_x":1,"size_y":1},{"col":1,"row":4,"size_x":1,"size_y":1},{"col":3,"row":4,"size_x":1,"size_y":1},{"col":2,"row":4,"size_x":1,"size_y":1},{"col":7,"row":3,"size_x":1,"size_y":1},{"col":6,"row":3,"size_x":1,"size_y":1},{"col":7,"row":2,"size_x":1,"size_y":1},{"col":5,"row":3,"size_x":1,"size_y":1},{"col":4,"row":3,"size_x":1,"size_y":1},{"col":4,"row":2,"size_x":1,"size_y":1},{"col":5,"row":2,"size_x":1,"size_y":1},{"col":6,"row":2,"size_x":1,"size_y":1},{"col":1,"row":3,"size_x":3,"size_y":1},{"col":3,"row":1,"size_x":5,"size_y":1},{"col":1,"row":2,"size_x":1,"size_y":1}]')
+  Dashing.widget_base_dimensions = [400, 400]
+  Dashing.numColumns = 11
+  Dashing.numRows = 5
 });
 </script>
 
 
-<% content_for :title do %>1080p dashboard<% end %>
+<% content_for :title do %>SBC warroom<% end %>
 
 <div class="gridster">
   <ul>
@@ -23,38 +24,84 @@ $(function() {
     </li>
     <% end %>
 
-    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+    <li data-row="4" data-col="9" data-sizex="1" data-sizey="1">
       <div data-id="hours_till_demoday" data-view="Number" data-title="Seconds till 3pm D-day" data-text="" data-moreinfo=""></div>
       <i class="icon-time icon-background"></i>
     </li>
 
-    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+    <li data-row="4" data-col="8" data-sizex="1" data-sizey="1">
       <div data-id="days_till_demoday" data-view="Number" data-title="Days till 3pm D-day" data-text="" data-moreinfo=""></div>
       <i class="icon-calendar icon-background"></i>
     </li>
 
-    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+    <!-- eng -->
+    <li data-row="2" data-col="1" data-sizex="3" data-sizey="1">
+      <div data-id="tech" data-view="Text" data-title="Engineering" data-text="Working on teleporting devices to make things easier!"></div>
+    </li>
+
+    <li data-row="3" data-col="1" data-sizex="1" data-sizey="1">
       <div data-id="dashboard_last_version" data-view="Number" data-title="Dashboard version" data-text="" data-moreinfo=""></div>
       <i class="icon-dashboard icon-background"></i>
     </li>
 
-    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+    <li data-row="3" data-col="2" data-sizex="1" data-sizey="1">
       <div data-id="github_repository_count" data-view="Number" data-title="Github Repositories" data-text="" data-moreinfo=""></div>
       <i class="icon-github icon-background"></i>
     </li>
 
-    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+    <li data-row="3" data-col="3" data-sizex="1" data-sizey="1">
       <div data-id="github_repository_daily_commits" data-view="Number" data-title="Daily Commit Count" data-text="" data-moreinfo=""></div>
       <i class="icon-github icon-background"></i>
     </li>
 
-    <% if false %>
-    <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
-      <div data-id="welcome" data-view="Text" data-title="Hello" data-text="Demoday is around the corner." data-moreinfo="Hustle now, relax later!"></div>
+    <!-- sales -->
+    <li data-row="1" data-col="4" data-sizex="4" data-sizey="1">
+      <div data-id="sales" data-view="Text" data-title="Sales" data-text="Whatever our wolves of wallstreet do... stays among them."></div>
     </li>
-    <% end %>
+    <li data-row="2" data-col="4" data-sizex="1" data-sizey="1">
+      <div data-id="pipeline_8_fiveday_movements" data-view="Number" data-title="Berlin Sales Activities" data-text="" data-moreinfo="Movements conducted in our attempt to sell in Berlin"></div>
+      <i class="icon-rocket icon-background"></i>
+    </li>
 
-    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+    <li data-row="2" data-col="5" data-sizex="1" data-sizey="1">
+      <div data-id="pipeline_9_fiveday_movements" data-view="Number" data-title="Non-Berlin Sales Activities" data-text="" data-moreinfo="Movements conducted in our attempt to sell beyond Berlin"></div>
+      <i class="icon-rocket icon-background"></i>
+    </li>
+    <li data-row="2" data-col="6" data-sizex="1" data-sizey="1">
+      <div data-id="pipeline_5_fiveday_movements" data-view="Number" data-title="Partners Activities" data-text="" data-moreinfo="Movements conducted in our attempt to making partners"></div>
+      <i class="icon-rocket icon-background"></i>
+    </li>
+
+    <li data-row="2" data-col="7" data-sizex="1" data-sizey="1">
+      <div data-id="pipeline_3_fiveday_movements" data-view="Number" data-title="Investor Intro Activities" data-text="" data-moreinfo="Movements conducted in our attempt to meet investors"></div>
+      <i class="icon-rocket icon-background"></i>
+    </li>
+
+    <li data-row="3" data-col="4" data-sizex="1" data-sizey="1">
+      <div data-id="pipeline_8_won" data-view="Number" data-title="Berlin Sales" data-text="" data-moreinfo="Sales won in Berlin since the start of SBC"></div>
+      <i class="icon-trophy icon-background"></i>
+    </li>
+
+    <li data-row="3" data-col="5" data-sizex="1" data-sizey="1">
+      <div data-id="pipeline_9_won" data-view="Number" data-title="Non-Berlin Sales" data-text="" data-moreinfo="Sales won in Berlin since the start of SBC"></div>
+      <i class="icon-trophy icon-background"></i>
+    </li>
+
+    <li data-row="3" data-col="6" data-sizex="1" data-sizey="1">
+      <div data-id="pipeline_5_won" data-view="Number" data-title="Partners Made" data-text="" data-moreinfo="Partners made"></div>
+      <i class="icon-trophy icon-background"></i>
+    </li>
+
+    <li data-row="3" data-col="7" data-sizex="1" data-sizey="1">
+      <div data-id="pipeline_3_won" data-view="Number" data-title="Investor Introductions Closed" data-text="" data-moreinfo="Investors won"></div>
+      <i class="icon-trophy icon-background"></i>
+    </li>
+
+    <li data-row="4" data-col="1" data-sizex="3" data-sizey="1">
+      <div data-id="motto" data-view="Text" data-title="Ask Yourself..." data-text="How many people have we driven to happiness today?" style="background-color:#333;"></div>
+    </li>
+
+    <li data-row="4" data-col="7" data-sizex="1" data-sizey="1">
       <div data-id="time_elapsed" data-view="Meter" data-title="D-Day" data-min="0" data-max="100"></div>
     </li>
 
