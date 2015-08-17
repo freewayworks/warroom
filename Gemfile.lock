@@ -28,6 +28,8 @@ GEM
       thin (~> 1.6.1)
       thor (~> 0.18.1)
     dotenv (2.0.2)
+    dotenv-heroku (0.0.1)
+      rake
     equalizer (0.0.11)
     eventmachine (1.0.8)
     execjs (2.0.2)
@@ -50,6 +52,7 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
+    rake (10.4.2)
     rufus-scheduler (2.0.24)
       tzinfo (>= 0.3.22)
     sass (3.2.19)
@@ -100,6 +103,7 @@ DEPENDENCIES
   curb
   dashing
   dotenv
+  dotenv-heroku
   time_difference
   twitter (>= 5.9.0)
 

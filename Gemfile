@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'dashing'
 gem 'dotenv'
+gem 'dotenv-heroku'
 gem 'curb'
 
 gem 'time_difference'
