@@ -4,6 +4,7 @@ gem 'dashing'
 gem 'dotenv'
 gem 'dotenv-heroku'
 gem 'curb'
+gem 'octokit'
 
 gem 'time_difference'
 
