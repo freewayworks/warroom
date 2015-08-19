@@ -10,6 +10,7 @@ SCHEDULER.every '1h', first_in: 0 do
   sbc_start_date = Date.new(2015, 8, 1)
   start_date = Date.today-5
   end_date = Date.today+1
+  puts pipelines
   pipelines.each do |pipeline|
     id = 8
     movement_res = Curl.get("https://api.pipedrive.com/v1/pipelines/#{pipeline["id"]}/movement_statistics?start_date=#{start_date}&end_date=#{end_date}&api_token=#{key}")
@@ -23,8 +24,4 @@ SCHEDULER.every '1h', first_in: 0 do
     send_event("pipeline_#{pipeline["id"]}_won", { current: pipeline_conversion["data"]["won_conversion"] })
     send_event("pipeline_#{pipeline["id"]}_lost", { current: pipeline_conversion["data"]["lost_conversion"] })
   end
-  #puts pipelines.count
-  #berlin_sales 
-  #Pipedrive.authenticate(ENV['PIPEDRIVE_API_KEY'])
-  #puts Pipedrive::Pipeline.all
 end
