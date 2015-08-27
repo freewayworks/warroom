@@ -4,7 +4,8 @@ require 'dotenv'
 Dotenv.load
 
 configure do
-  set :auth_token, 'YOUR_AUTH_TOKEN'
+  set :auth_token, ENV['AUTH_TOKEN']
+  set :default_dashboard, ENV['DEFAULT_DASHBOARD']
 
   helpers do
     def protected!
